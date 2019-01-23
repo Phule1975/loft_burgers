@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "gagalin";
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "lifehack";
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ubuntu-b";
+  src: url("../fonts/ubuntu-b-webfont.woff") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ubuntu-light";
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ubuntu-medium";
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .header {
   background: #fafafa; }
 
@@ -8,4 +50,8 @@ body {
   height: 100%;
   width: 100%; }
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9oZWFkZXIuc2NzcyIsImJsb2Nrcy9zZWN0aW9uLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxvQkFBbUIsRUFDdEI7O0FBQ0Q7RUFDSSxpQkFBZ0IsRUFDbkI7O0FDTEQ7RUFDSSxhQUFZO0VBQ1osWUFBVyxFQUNkIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlcntcclxuICAgIGJhY2tncm91bmQ6ICNmYWZhZmE7XHJcbn1cclxuYm9keXtcclxuICAgIGJhY2tncm91bmQ6ICNjY2M7XHJcbn0iLCIuc2VjdGlvbiB7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufSJdfQ== */
+.main {
+  font-family: "lifehack";
+  font-size: 16px; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9mb250cy5zY3NzIiwiYmxvY2tzL2hlYWRlci5zY3NzIiwiYmxvY2tzL3NlY3Rpb24uc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUFzQjtFQUN0QixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLHdCQUF1QjtFQUN2QixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLHNCQUFxQjtFQUNyQixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLHdCQUF1QjtFQUN2Qix3SEFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLDRCQUEyQjtFQUMzQixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLDZCQUE0QjtFQUM1QixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQUcxQjtFQUNJLHNCQUFxQjtFQUNyQixnSUFDK0Q7RUFDM0Qsb0JBQW1CO0VBQ25CLG1CQUFrQixFQUFBOztBQ3JEMUI7RUFDSSxvQkFBbUIsRUFDdEI7O0FBQ0Q7RUFDSSxpQkFBZ0IsRUFDbkI7O0FDTEQ7RUFDSSxhQUFZO0VBQ1osWUFBVyxFQUNkOztBQUVEO0VBQ0ksd0JBQXVCO0VBQ3ZCLGdCQUFlLEVBQ2xCIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTogXCJnYWdhbGluXCI7XHJcbiAgICBzcmM6IHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmYyXCIpIGZvcm1hdChcIndvZmYyXCIpLFxyXG4gICAgICAgIHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcclxuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxufVxyXG5cclxuQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTogXCJsaWZlaGFja1wiO1xyXG4gICAgc3JjOiB1cmwoXCIuLi9mb250cy9saWZlaGFja19tZWRpdW0td2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSxcclxuICAgICAgICB1cmwoXCIuLi9mb250cy9saWZlaGFja19tZWRpdW0td2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxuICAgICAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbn1cclxuXHJcbkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6IFwidWJ1bnR1XCI7XHJcbiAgICBzcmM6IHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmYyXCIpIGZvcm1hdChcIndvZmYyXCIpLFxyXG4gICAgICAgIHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcclxuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxufVxyXG5cclxuQGZvbnQtZmFjZSB7XHJcbiAgICBmb250LWZhbWlseTogXCJ1YnVudHUtYlwiO1xyXG4gICAgc3JjOiB1cmwoXCIuLi9mb250cy91YnVudHUtYi13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZjJcIiksXHJcbiAgICAgICAgdXJsKFwiLi4vZm9udHMvZ2FnYWxpbi1yZWd1bGFyLXdlYmZvbnQud29mZlwiKSBmb3JtYXQoXCJ3b2ZmXCIpO1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgICAgICAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG59XHJcblxyXG5AZm9udC1mYWNlIHtcclxuICAgIGZvbnQtZmFtaWx5OiBcInVidW50dS1saWdodFwiO1xyXG4gICAgc3JjOiB1cmwoXCIuLi9mb250cy9nYWdhbGluLXJlZ3VsYXItd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSxcclxuICAgICAgICB1cmwoXCIuLi9mb250cy9nYWdhbGluLXJlZ3VsYXItd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxuICAgICAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbn1cclxuXHJcbkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6IFwidWJ1bnR1LW1lZGl1bVwiO1xyXG4gICAgc3JjOiB1cmwoXCIuLi9mb250cy9nYWdhbGluLXJlZ3VsYXItd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSxcclxuICAgICAgICB1cmwoXCIuLi9mb250cy9nYWdhbGluLXJlZ3VsYXItd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxuICAgICAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbn1cclxuXHJcbkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6IFwidWJ1bnR1XCI7XHJcbiAgICBzcmM6IHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmYyXCIpIGZvcm1hdChcIndvZmYyXCIpLFxyXG4gICAgICAgIHVybChcIi4uL2ZvbnRzL2dhZ2FsaW4tcmVndWxhci13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcclxuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxufSIsIi5oZWFkZXJ7XHJcbiAgICBiYWNrZ3JvdW5kOiAjZmFmYWZhO1xyXG59XHJcbmJvZHl7XHJcbiAgICBiYWNrZ3JvdW5kOiAjY2NjO1xyXG59IiwiLnNlY3Rpb24ge1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7ICAgICAgIFxyXG59XHJcblxyXG4ubWFpbiB7XHJcbiAgICBmb250LWZhbWlseTogXCJsaWZlaGFja1wiO1xyXG4gICAgZm9udC1zaXplOiAxNnB4OyAgICBcclxufSJdfQ== */
