@@ -39,9 +39,37 @@
 }
 
 @font-face {
-    font-family: 'ubunturegular';
+    font-family: 'ubuntu';
     src: url('ubuntu-regular-webfont.woff2') format('woff2'),
          url('ubuntu-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+}
+
+@mixin gagalin() {
+    font-family: 'gagalin', Helvetica, sans-serif;
+}
+
+@mixin lifehack() {
+    font-family: 'lifehack', cursive;
+}
+
+@mixin ubuntu($style: light) {
+    font-family: 'ubuntu', Verdana, Arial, sans-serif;
+
+    @if $style == light {
+        font-weight: 300;
+    }
+
+    @if $style == regular {
+        font-weight: 400;
+    }
+
+    @if $style == medium {
+        font-weight: 500;
+    }
+
+    @if $style == bold {
+        font-weight: 700;
+    }
 }

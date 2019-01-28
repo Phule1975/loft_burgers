@@ -1,0 +1,29 @@
+.hero {
+    background: url("../img/background/texture.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;    
+}
+
+.hero__container {
+    flex: 1;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.75;
+}
+
+.hero__desc {
+    @include lifehack;
+    color: $white;
+    font-size: 65px;
+}
+
+.down-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

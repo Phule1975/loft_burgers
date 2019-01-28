@@ -1,22 +1,29 @@
 .section {
-    height: 100%;
-    width: 100%;       
+    min-height: 650px;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    &_centered {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .section__title {
+    font-size: 72px;
     @include gagalin;
-    &--white {
-        @extend .section__title;
-        color: $white;
-    }
-    &--dark {
-        @extend .section__title;
-        color:$dark-grey;
-    }
-}
+    color: $butterscotch;
+    margin-bottom: 40px;
 
+    &_color {
+        &_black {
+            color: $dark-grey;
+        }
+    }
 
-.main-section {
-    font-family: "lifehack";
-    font-size: 16px;    
+    &_position {
+        &_center {
+            text-align: center;
+        }
+    }
 }

@@ -1,0 +1,40 @@
+.we-best {
+    background: url("../img/background/best.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.we-best__list {
+    display: flex;
+    
+    
+  }
+  
+  .we-best__item {
+    margin-right: 20px;
+    flex: 1;
+    /*display: flex;
+    flex-direction: column;*/
+    align-items: center;
+
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .we-best__icon-pic {
+      display: inline-block;
+  }
+
+  .we-best__title {
+      @include lifehack;
+      font-size: 24px;
+      text-align: center;
+      color: $dark-grey;
+  }
+
+  .we-best__text {
+      @include ubuntu (light);
+      font-size: 14px;
+      text-align: center;
+  }
