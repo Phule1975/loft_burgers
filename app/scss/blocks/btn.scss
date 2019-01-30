@@ -14,8 +14,14 @@
 
 .btn-order {
     background: $tomato;
+    &:hover {
+        background: darker($tomato, 2);
+    }
 }
 
 .btn-black {
     background: $dark-grey;
+    &:hover {
+        background: darker($dark-grey, 2);
+    }
 }

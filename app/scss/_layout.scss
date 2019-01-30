@@ -39,3 +39,13 @@ ul {
         list-style: none;
     }
 }
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@function darker($color, $tone) {
+    $adjust: -16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}

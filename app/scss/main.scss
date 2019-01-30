@@ -1,5 +1,5 @@
 @import "variables";
-/*@import"mixin";*/
+@import"mixin";
 @import "fonts";
 @import "layout";
 
@@ -9,3 +9,4 @@
 @import "blocks/section";
 @import "blocks/we-best";
 @import "blocks/reviews";
+@import "blocks/fixed-menu";
