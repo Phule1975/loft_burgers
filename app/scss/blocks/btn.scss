@@ -2,7 +2,7 @@
     @include ubuntu (medium);
     font-size: 13px;
     display: inline-block;
-    background: $tomato;
+    
     padding: 13px 15px;
     text-transform: uppercase;
     color: $white;
@@ -10,5 +10,12 @@
     text-decoration: none;
     border-radius: 3px;
     border: 1px solid transparent;
-    cursor: pointer;
+}
+
+.btn-order {
+    background: $tomato;
+}
+
+.btn-black {
+    background: $dark-grey;
 }
