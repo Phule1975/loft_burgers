@@ -1,3 +1,12 @@
+@import "variables";
+@import"mixin";
 @import "fonts";
+@import "layout";
 
+@import "blocks/hero";
 @import "blocks/header";
+@import "blocks/btn.scss";
+@import "blocks/section";
+@import "blocks/we-best";
+@import "blocks/reviews";
+@import "blocks/fixed-menu";

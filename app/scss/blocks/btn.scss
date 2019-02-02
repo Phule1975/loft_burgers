@@ -1,0 +1,27 @@
+.btn {
+    @include ubuntu (medium);
+    font-size: 13px;
+    display: inline-block;
+    
+    padding: 13px 15px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.btn-order {
+    background: $tomato;
+    &:hover {
+        background: darker($tomato, 2);
+    }
+}
+
+.btn-black {
+    background: $dark-grey;
+    &:hover {
+        background: darker($dark-grey, 2);
+    }
+}

@@ -1,0 +1,30 @@
+.section {
+    min-height: 650px;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    &_centered {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.section__title {
+    font-size: 72px;
+    @include gagalin;
+    color: $butterscotch;
+    margin-bottom: 40px;
+
+    &_color {
+        &_black {
+            color: $dark-grey;
+        }
+    }
+
+    &_position {
+        &_center {
+            text-align: center;
+        }
+    }
+}
