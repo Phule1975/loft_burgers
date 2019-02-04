@@ -1,7 +1,26 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 @function rem($px) {
     @return $px / 16px+0rem;
     //@return $px;
   }
+
+  @function darker($color, $tone) {
+    $adjust: -16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@mixin cover(){
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 @mixin centered($axis: 'both') {
     position: absolute;
@@ -33,4 +52,16 @@
       top:0;
       bottom:0;
     }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
   }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}

@@ -6,7 +6,7 @@
 }
 
 .logo__image {
-    max-width: 94px;
+    max-width: rem(94px);
 }
 
 .header-menu {
@@ -14,6 +14,12 @@
     align-items: center;
     /*text-align: right;*/
     /*margin-left: auto;*/
+}
+
+.nav {
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav__list {
@@ -31,7 +37,7 @@
 
 .nav__link {
     @include ubuntu(medium);
-    font-size: 13px;
+    font-size: rem(13px);
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
@@ -41,8 +47,8 @@
     &::after {
         content: "";
         display: block;
-        width: 6px;
-        height: 6px;
+        width: rem(6px);
+        height: rem(6px);
         border-radius: 50%;
         background: #fff;
         margin: 0 16px;

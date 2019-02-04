@@ -5,9 +5,10 @@
 
 .we-best__list {
     display: flex;
-    
-    
-  }
+    @include phones {
+        flex-direction: column;
+    }
+}
   
   .we-best__item {
     margin-right: 20px;
@@ -15,6 +16,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include phones {
+        flex-direction: row;
+        width: 100%;
+    }
 
   
     &:last-child {
@@ -30,12 +35,12 @@
 
   .we-best__title {
       @include lifehack;
-      font-size: 24px;
+      font-size: rem(24px);
       color: $dark-grey;
       margin-bottom: 10px;
   }
 
   .we-best__text {
       @include ubuntu (light);
-      font-size: 14px;
+      font-size: rem(14px);
   }

@@ -29,12 +29,14 @@
 .hero__desc {
     @include lifehack;
     color: $white;
-    font-size: 65px;
+    font-size: rem(65px);
+    text-transform: lowercase;
+    line-height: 1;
 }
 
 .down-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: rem(60px);
 }

@@ -10,27 +10,54 @@ body {
     padding: 0;
 }
 
+html {
+    @include tablets {
+        font-size: rem(15px);
+    }
+
+    @include phones {
+        font-size: rem(13px);
+    }
+}
+
 body {
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.42;
     position: relative;
     @include ubuntu(regular);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 .wrapper {
     overflow: hidden;
     min-height: 100%;
     width: 100%;
-    min-width: 940px;
+    min-width: rem(940px);
     position: relative;
 }
 
 .container {
-    width: 940px;
+    max-width: rem(940px);
+    min-width: rem(320px);
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
 
 ul {
     margin: 0;
@@ -45,7 +72,7 @@ p {
     padding: 0;
 }
 
-@function darker($color, $tone) {
-    $adjust: -16*$tone;
-    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
-}
+/*footer {
+    position: relative;
+    width: 100%;
+}*/

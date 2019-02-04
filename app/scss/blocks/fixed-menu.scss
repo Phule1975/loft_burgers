@@ -1,7 +1,7 @@
 .points__list {
     position: fixed;
-    top: 90px;
-    right: 40px;
+    top: rem(90px);
+    right: rem(40px);
 }
 
 .points__link {
@@ -33,8 +33,8 @@
 
     &:hover {
         &:before {
-            width: 14px;
-            height: 14px;
+            width: rem(14px);
+            height: rem(14px);
             opacity: 1;
         }
     }
@@ -44,8 +44,8 @@
     &.active {
         .points__link {
             &:before {
-                width: 14px;
-                height: 14px;
+                width: rem(14px);
+                height: rem(14px);
                 opacity: 1;
             }
         }

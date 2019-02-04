@@ -1,0 +1,166 @@
+.team {
+    background: url("../img/background/team.jpg") top no-repeat;
+    background-size: cover;
+    .section__title {
+        margin-bottom: rem(80px);
+    }
+    @include tablets {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba($dark-grey, 0.93);
+        }
+    }
+}
+
+.team__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    background: rgba($dark-grey, 0.93);
+    padding: 5% 2% 0 7%;
+    @include tablets {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background: transparent;
+        padding: 0;
+    }
+}
+
+.team-accordion {
+    @include tablets {
+        padding-bottom: rem(20px);
+    }
+}
+
+.team-accordion__item {
+    margin-bottom: rem(40px);
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.is-active {
+        .team-accordion__link {
+            color: $butterscotch;
+
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .team-accordion__details {
+            display: block;
+        }
+    }
+}
+
+.team-accordion__link {
+    color: $white;
+    font-size: rem(14px);
+    @include gagalin;
+    text-decoration: none;
+    position: relative;
+    display: block;
+
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: rem(-18px);
+        top: rem(8px);
+        width: 0;
+        height: 0;
+    }
+
+    &:before {
+        border-top: rem(7px) solid $butterscotch;
+        border-left: rem(5px) solid transparent;
+        border-right: rem(5px) solid transparent;
+        border-bottom: 0 solid transparent;
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+
+    &:after {
+        display: none;
+        border-bottom: rem(7px) solid $butterscotch;
+        border-left: rem(5px) solid transparent;
+        border-right: rem(5px) solid transparent;
+        border-top: 0 solid transparent;
+    }
+
+    @include tablets {
+        display: inline-block;
+        font-size: 25px;
+
+        &:before {
+            margin-top: 10px;
+        }
+    }
+}
+
+.team-accordion__details {
+    @extend %clearfix;
+    padding-top: rem(20px);
+    display: none;
+    @include tablets {
+        padding: 0 25%;
+    }
+}
+
+.team-accordion__photo {
+    margin-right: rem(20px);
+    @include tablets {
+        margin-bottom: 15px;
+    }
+}
+
+.team-accordion__img {
+    display: inline-block;
+    vertical-align: top;
+    width: rem(100px);
+    height: rem(100px);
+    @include cover;
+    border-radius: 50%;
+}
+
+.team-accordion__desc {
+    width: 70%;
+}
+
+.team-accordion__photo, .team-accordion__desc {
+	float: left;
+	@include tablets {
+		width: 100%;
+	}
+}
+
+.team-accordion__post {
+    @include ubuntu(bold);
+	font-size: rem(14px);
+	color: $white;
+	margin-bottom: rem(14px);
+}
+
+.team-accordion__about {
+    @include ubuntu(light);
+	color: $white;
+	font-size: rem(14px);
+}
