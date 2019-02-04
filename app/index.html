@@ -267,7 +267,83 @@
                     </ul>
             </section>
             <section class="work"></section>
-            <section class="section main-form"></section>
+            <section class="section order-section">
+                <div class="container">
+                    <div class="section__title section__title_position_center">Закажите доставку</div>
+                    <form class="main-form">
+                        <div class="form__col">
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__label">Имя</div>
+                                    <input class="form__input" name="name" type="text" placeholder>
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__label">Телефон</div>
+                                    <input class="form__input phone-mask" name="phone" type="text" placeholder>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__label">Улица</div>
+                                    <input class="form__input" name="street" type="text" placeholder>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__label">Дом</div>
+                                    <input class="form__input" name="home" type="text" placeholder>
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__label">Корпус</div>
+                                    <input class="form__input" name="part" type="text" placeholder>
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__label">Квартира</div>
+                                    <input class="form__input" name="appt" type="text" placeholder>
+                                </label>
+                                <label class="form__block">
+                                    <div class="form__label">Этаж</div>
+                                    <input class="form__input" name="floor" type="text" placeholder>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__col">
+                            <div class="form__row">
+                                <label class="form__block">
+                                    <div class="form__label">Комминтарий</div>
+                                    <textarea class="form__input form__input_textarea" name="comment"></textarea>
+                                </label>
+                            </div>
+                            <div class="form__buttons">
+                                <div class="form__row">
+                                    <label class="form__radio">
+                                        <input class="form__radio-elem" name="payment" type="radio" checked>
+                                        <div class="form__radio-fake"></div>
+                                        <div class="form__radio-title">Потребуется сдача</div>
+                                    </label>
+                                    <label class="form__radio">
+                                        <input class="form__radio-elem" name="payment" type="radio">
+                                        <div class="form__radio-fake"></div>
+                                        <div class="form__radio-title">Оплата по карте</div>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <label class="form__checkbox">
+                                        <input class="form__checkbox-elem" name="callback" type="checkbox">
+                                        <div class="form__checkbox-fake"></div>
+                                        <div class="form__radio-title">Не перезванивать</div>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <input class="form__button" name type="submit" value="Заказать">
+                                    <input class="form__button form__button_reset" name type="reset" value="Очистить">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </section>
             <section class="section map">
                 <footer class="footer">
                     <div class="container footer__container">
