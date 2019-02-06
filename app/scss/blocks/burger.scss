@@ -1,35 +1,43 @@
 .burger {
-    height: 22px;
-    width: 24px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer; }
-    @media screen and (max-width: 768px) {
-      .burger {
-        display: flex; } }
-  
-  .burger--active {
-    z-index: 10;
-    position: relative; }
-    .burger--active .burger__line {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #c1c2c2;
-      transition: all .2s; }
-      .burger--active .burger__line:nth-child(2) {
-        display: none; }
-      .burger--active .burger__line:nth-child(1) {
-        transform: rotate(45deg); }
-      .burger--active .burger__line:nth-child(3) {
-        transform: rotate(-45deg); }
-  
+  height: 22px;
+  width: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.burger--active {
+  z-index: 10;
+  position: relative;
   .burger__line {
-    width: 24px;
-    height: 4px;
-    background-color: #fff;
-    display: block;
-    border-radius: 3px; }
-  
-  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #c1c2c2;
+    transition: all 0.2s;
+
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+.burger__line {
+  width: 24px;
+  height: 4px;
+  background-color: $white;
+  display: block;
+  border-radius: 3px;
+}
