@@ -3,12 +3,13 @@
     font-size: rem(13px);
     display: inline-block;
     color: $white;
-    padding: rem(13px) rem(15px);
+    padding: rem(3px) rem(15px);
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .btn-order {

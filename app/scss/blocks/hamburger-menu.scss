@@ -1,4 +1,4 @@
-.burger {
+.hamburger-menu {
   height: 22px;
   width: 24px;
   display: none;
@@ -11,10 +11,10 @@
   }
 }
 
-.burger--active {
+.hamburger-menu--active {
   z-index: 10;
   position: relative;
-  .burger__line {
+  .hamburger-menu__line {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -34,7 +34,7 @@
 }
 
 
-.burger__line {
+.hamburger-menu__line {
   width: 24px;
   height: 4px;
   background-color: $white;
