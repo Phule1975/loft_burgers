@@ -33,6 +33,13 @@
         width: 100%;
         margin-right: 0;
     }
+
+    @include phones {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .form__row {
@@ -51,6 +58,8 @@
         margin-top: rem(20px);
     }
 }
+    
+
 
 .form__block {
     margin-right: rem(20px);
@@ -70,7 +79,7 @@
 }
 
 .form__input {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: rem(5px);
     width: 100%;
     padding: rem(5px) rem(10px);
@@ -175,7 +184,12 @@
     @include ubuntu(medium);
     padding: 10px 15px;
     cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
 }
+     
+    
 /*
 
 .btn {

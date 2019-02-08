@@ -63,6 +63,9 @@
   transition: 0.3s;
   z-index: 10;
   overflow: hidden;
+  @include phones {
+    padding: 3% 9%;
+  }
 }
 
 .review__name {

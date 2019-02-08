@@ -19,7 +19,10 @@
     @include tablets {
         margin-left: auto;
         margin-right: rem(25px);
-        
+    }
+    @include phones {
+        margin-top: 10px;
+        margin-right: rem(45px);
     }
 }
 
