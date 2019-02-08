@@ -41,12 +41,6 @@
     }
 }
 
-.team-accordion {
-    @include tablets {
-        padding-bottom: rem(20px);
-    }
-}
-
 .team-accordion__item {
     margin-bottom: rem(40px);
     @include tablets {

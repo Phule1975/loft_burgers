@@ -1,6 +1,13 @@
 .we-best {
     background: url("../img/background/best.jpg") center center no-repeat;
     background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    @include phones {
+        align-items: flex-start;
+        padding-top: rem(50px);
+    }
 }
 
 .we-best__list {
@@ -27,10 +34,18 @@
     }
   }
 
+  .we-best__icon {
+    margin-bottom: rem(15px);
+    @include phones {
+        margin-bottom: 0;
+        margin-right: rem(20px);
+        width: 30%;
+    }
+  }
+
   .we-best__icon-pic {
       display: inline-block;
-      height: 5rem;
-      margin-bottom: 21px;
+      height: 5rem;      
   }
 
   .we-best__title {
