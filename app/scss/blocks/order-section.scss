@@ -38,6 +38,9 @@
 .form__row {
     display: flex;
     margin-bottom: rem(20px);
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .form__buttons {
@@ -62,6 +65,8 @@
     color: $white;
     margin-bottom: 10px;
     font-size: rem(14px);
+    
+
 }
 
 .form__input {
@@ -69,6 +74,10 @@
     border-radius: rem(5px);
     width: 100%;
     padding: rem(5px) rem(10px);
+    outline: none;
+    &:focus {
+        border: 2px solid $butterscotch;
+    }
 }
 
 .form__input_textarea{
@@ -80,6 +89,9 @@
     display: flex;
     margin-right:rem(20px);
     align-items:center;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .form__radio-title{
@@ -164,12 +176,32 @@
     padding: 10px 15px;
     cursor: pointer;
 }
+/*
+
+.btn {
+    @include ubuntu (medium);
+    font-size: rem(13px);
+    display: inline-block;
+    color: $white;
+    padding: rem(3px) rem(15px);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+*/
+
+
+
   
 .form__button_reset {
     padding-left: 0;
     padding-right: 0;
     text-transform: none;
     background: transparent;
+    outline: none;
 }
 
 

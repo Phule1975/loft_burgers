@@ -18,7 +18,7 @@
     margin-left: rem(9px);
     @include tablets {
         margin-left: auto;
-        margin-right: 20px;
+        margin-right: rem(25px);
         
     }
 }

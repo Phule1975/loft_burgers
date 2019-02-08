@@ -5,7 +5,7 @@
     text-align: center;
     align-items: center;
     @include phones {
-        align-items: flex-start;
+        align-items: flex-start; 
         padding-top: rem(50px);
     }
 }
@@ -26,6 +26,8 @@
     @include phones {
         flex-direction: row;
         width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
   
@@ -36,6 +38,7 @@
 
   .we-best__icon {
     margin-bottom: rem(15px);
+    min-width: 100px;;
     @include phones {
         margin-bottom: 0;
         margin-right: rem(20px);
@@ -58,4 +61,7 @@
   .we-best__text {
       @include ubuntu (light);
       font-size: rem(14px);
+      @include phones {
+          text-align: left
+      }
   }
