@@ -1,0 +1,38 @@
+.burgers {
+    background: linear-gradient(to bottom,  #f9b43b 0%,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%);
+    align-items: center;
+    justify-content: center;
+
+    .section__title {
+        margin: rem(10px) 0 rem(30px) rem(10px);
+    }
+    .container {
+        flex-direction: row;
+    }
+}
+
+.slider {
+    &__left,
+    &__right {
+        flex: 1;
+        /*width: 50%;*/
+    }
+
+    &__pic {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/*.slider__left {
+    width: 50%;
+}
+
+.slider__pic {
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider__right {
+    width: 50%;
+}*/
