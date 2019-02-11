@@ -90,11 +90,84 @@
             </section>
             <section class="section burgers">
                 <div class="container">
-                    <div class="slider__left">
-                        <img class="slider__pic" src="./img/slider/dark_burger.png" alt="">
-                    </div>
-                    <div class="slider__right">
-                        <div class="section__title section__title_white">Dark Beef Burger</div>
+                    <div class="slider-warp">
+                        <div class="clider__controls">
+                            <a class="slider__btn slider__btn_next" href="#">
+                                <svg class="slider__arrow">
+                                    <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use> 
+                                </svg>
+                            </a>
+                            <a class="slider__btn slider__btn_prev" href="#">
+                                <svg class="slider__arrow">
+                                    <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use> 
+                                </svg>                                
+                            </a>
+                        </div>
+                        <ul class="slider__list">
+                            <li class="slider__item">
+                                <div class="ingredients">
+                                    <svg class="ingredients__icon">
+                                        <use xlink:href="./img/icons/sprite.svg#burger"></use> 
+                                    </svg>
+                                    <div class="ingredients__icon-text">Состав</div>
+                                <!--<div class="ingredients__dropdown">
+                                        <ul class="ingredients__list">
+                                            <li class="ingredients__row">
+                                                <div class="ingredients__cell">
+                                                    <img src="./img/icons/beef.svg" alt="ingredients__table-icon">
+                                                </div>
+                                                <div class="ingredients__cell">
+                                                    <div class="ingredients__item">Говядина</div>
+                                                </div>
+                                                <div class="ingredients__cell">
+                                                    <div class="ingredients__wight">300г</div>
+                                                </div>
+                                            </li>
+                                            <li class="ingredients__row">
+                                                <div class="ingredients__cell">
+                                                    <img src="./img/icons/buns.svg" alt="ingredients__table-icon">
+                                                </div>
+                                                <div class="ingredients__cell">
+                                                    <div class="ingredients__item">Булочки</div>
+                                                </div>
+                                                <div class="ingredients__cell">
+                                                    <div class="ingredients__wight">100г</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a class="ingredients__close" href="#">
+                                            <svg class="ingredients__close-btn">
+                                                <use xlink:href="./img/icon/sprite.svg#close"></use>
+                                            </svg>
+                                        </a>
+                                    </div>-->
+                                </div>
+                                <div class="burger-weight">
+                                    <div class="burger-weight__measure">
+                                        <div class="burger-weight__amount">1200</div>
+                                    </div>
+                                    <div class="burger-weight__title">ккал</div>
+                                </div>
+                                <div class="slider__left">
+                                    <img class="slider__pic" src="./img/slider/dark_burger.png" alt="">
+                                </div>
+                                <div class="slider__right">
+                                    <div class="section__title section__title_white">Dark Beef Burger</div>
+                                    <div class="slider__text text-block">
+                                        <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом 
+                                        и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                    </div>
+                                    <div class="slider__options">
+                                        <div class="slider__price">
+                                            <div class="slider__price-amount">500</div>
+                                            <div class="slider__price-measure">рублей</div>
+                                        </div>
+                                        <button class="btn btn_buy" type="button">Заказать</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
