@@ -49,7 +49,7 @@
     padding: rem(20px);
     background: rgba(#fff, .9);
     position: absolute;
-    width: rem(270px);
+    width: rem(372px);
     border-radius: rem(7px);
     left: -9999px;
     opacity: 0;
@@ -68,23 +68,7 @@
     }
 }
 
-.ingredients__row{
-    display:flex;
-    align-items: center;
-    margin-bottom: rem(10px);
-}
 
-.ingredients__cell {
-    padding-left: rem(20px);
-}
-
-.ingredients__cell:last-child {
-    margin-left:auto;
-}
-  
-.ingredients__cell:first-child {
-    padding-left: 0px;
-}
 
 .ingredients__item {
     @include ubuntu(500);

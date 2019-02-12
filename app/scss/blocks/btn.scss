@@ -3,7 +3,7 @@
     font-size: rem(13px);
     display: inline-block;
     color: $white;
-    padding: rem(3px) rem(15px);
+    padding: rem(10px) rem(15px);
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.btn-order {
+.btn--order {
     background: $tomato;
     &:hover {
         background: darker($tomato, 2);
@@ -24,4 +24,8 @@
     &:hover {
         background: darker($dark-grey, 2);
     }
+}
+
+.btn--buy {
+    margin-left: rem(32px);
 }

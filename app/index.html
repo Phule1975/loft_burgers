@@ -29,7 +29,7 @@
                             </nav>
                         </div>
                         <div class="header__link">
-                            <a class="btn btn-order" href="#">Заказать</a>
+                            <a class="btn btn--order" href="#">Заказать</a>
                         </div>
 
                     </header>
@@ -105,42 +105,49 @@
                         </div>
                         <ul class="slider__list">
                             <li class="slider__item">
-                                <div class="ingredients">
+                                <div class="ingredients ingredients_activ">
                                     <svg class="ingredients__icon">
                                         <use xlink:href="./img/icons/sprite.svg#burger"></use> 
                                     </svg>
                                     <div class="ingredients__icon-text">Состав</div>
-                                <!--<div class="ingredients__dropdown">
-                                        <ul class="ingredients__list">
-                                            <li class="ingredients__row">
-                                                <div class="ingredients__cell">
-                                                    <img src="./img/icons/beef.svg" alt="ingredients__table-icon">
-                                                </div>
-                                                <div class="ingredients__cell">
-                                                    <div class="ingredients__item">Говядина</div>
-                                                </div>
-                                                <div class="ingredients__cell">
-                                                    <div class="ingredients__wight">300г</div>
-                                                </div>
-                                            </li>
-                                            <li class="ingredients__row">
-                                                <div class="ingredients__cell">
-                                                    <img src="./img/icons/buns.svg" alt="ingredients__table-icon">
-                                                </div>
-                                                <div class="ingredients__cell">
-                                                    <div class="ingredients__item">Булочки</div>
-                                                </div>
-                                                <div class="ingredients__cell">
-                                                    <div class="ingredients__wight">100г</div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="ingredients__dropdown">
+                                        <table class="ingredients__list">
+                                        <tr>
+                                            <td><img src="./img/icons/beef.svg" alt="ingredients__table-icon"></td>
+                                            <td>Говядина</td>
+                                            <td>300 г</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icons/buns.svg" alt="ingredients__table-icon"></td>
+                                            <td>Булочки</td>
+                                            <td>100 г</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icons/salad.svg" alt="ingredients__table-icon"></td>
+                                            <td>Зелень</td>
+                                            <td>70 г</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icons/sauce.svg" alt="ingredients__table-icon"></td>
+                                            <td>Соус</td>
+                                            <td>150 г</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icons/cucumber.svg" alt="ingredients__table-icon"></td>
+                                            <td>Овощи</td>
+                                            <td>200 г</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./img/icons/cheese.svg" alt="ingredients__table-icon"></td>
+                                            <td>Сыр</td>
+                                            <td>80 г</td>
+                                        </tr>
+                                        </table>
                                         <a class="ingredients__close" href="#">
-                                            <svg class="ingredients__close-btn">
-                                                <use xlink:href="./img/icon/sprite.svg#close"></use>
-                                            </svg>
+                                            <img src="./img/icons/close.svg" alt="">
                                         </a>
-                                    </div>-->
+                                    </div>
+                                    
                                 </div>
                                 <div class="burger-weight">
                                     <div class="burger-weight__measure">
@@ -163,7 +170,8 @@
                                             <div class="slider__price-amount">500</div>
                                             <div class="slider__price-measure">рублей</div>
                                         </div>
-                                        <button class="btn btn_buy" type="button">Заказать</button>
+                                        <a class="btn btn--order btn--buy" href="#">Заказать</a>
+                                        
                                     </div>
                                 </div>
                             </li>
