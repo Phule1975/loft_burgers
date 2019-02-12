@@ -1,0 +1,41 @@
+.nav {
+    display: inline-block;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    &:last-child {
+        .nav__link::after {
+            display: none;
+        }
+    }
+}
+
+.nav__link {
+    @include ubuntu(medium);
+    font-size: rem(13px);
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: "";
+        display: block;
+        width: rem(6px);
+        height: rem(6px);
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 rem(10px);
+    }
+}

@@ -15,6 +15,20 @@
       position: static;
       margin-top: rem(-74px);
     }
+
+    &:hover {
+        background: $tomato;
+        .ingredients__dropdown {
+            left: 100%;
+            opacity: 1;
+            @include phones {
+                left: rem(93px);
+                right: 0;
+            }
+        }
+    }
+
+    /*
     &.ingredients_active {
 
         background: $tomato;
@@ -26,7 +40,8 @@
                 right: 0;
             }
         }
-    }
+    }*/
+
     @include tablets() {
       top: 0;
     }
