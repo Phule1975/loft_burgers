@@ -1,8 +1,35 @@
 .nav {
     display: inline-block;
+    vertical-align: middle;
 
     @include tablets {
         display: none;
+    }
+    &_hamburger {
+        width: auto;
+
+        .nav__list {
+            flex-direction: column;
+        }
+        .nav__item {
+            display: inline;
+            text-align: center;
+            
+
+            &:after {
+                display: block;
+                margin: 15px auto;
+            
+            }
+        }
+
+        .nav__link{
+            font-size: rem(25px);
+        }
+
+        @include tablets {
+            display: block;
+        }
     }
 }
 
@@ -13,6 +40,9 @@
 }
 
 .nav__item {
+    
+    display: inline-block;
+    vertical-align: middle;
     &:last-child {
         .nav__link::after {
             display: none;
@@ -31,7 +61,8 @@
 
     &::after {
         content: "";
-        display: block;
+        display: inline-block;
+        vertical-align: middle;
         width: rem(6px);
         height: rem(6px);
         border-radius: 50%;

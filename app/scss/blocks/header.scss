@@ -30,6 +30,11 @@
     display: inline-block;
     position: relative;
     padding-top: rem(12px);
+    &--hamburger {
+        position: fixed;
+        top: rem(12px);
+        left: rem(24px);
+    }
 }
 
 .logo__image {
