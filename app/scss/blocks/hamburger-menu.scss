@@ -49,7 +49,7 @@
 }
 
 .hamburger-menu {
-  position: absolute;
+  position: fixed;
   left: -99999px;
   right: 0;
   background: rgba(#2f3234, .95);
