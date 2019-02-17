@@ -1,21 +1,22 @@
 let menu = (function(options) {
-    let button = document.querySelector("#hamburger-menu-link");
-    let menu = document.querySelector("#hamburger-menu");
+    let buttonClick = document.querySelector(options.buttonClick);
+    let menu = document.querySelector(options.menu);
 
     let _toggleMenu = function(e) {
-        button.classList.toggle("is-activ");
-        menu.classList.toggle("is-activ");
-        console.log(button);
+        buttonClick.classList.toggle("is-active");
+        menu.classList.toggle("is-active");
+        console.log(buttonClick);
+        console.log(menu);
     }
     let addListeners= function () {
-        button.addEventListener("click", _toggleMenu); 
+        buttonClick.addEventListener("click", _toggleMenu); 
     }
 
-    return {openMenu: addListeners};
+    return {open: addListeners};
 }) ({
-    button: "#hamburger-menu-link",
+    buttonClick: "#hamburger-menu-link",
     menu: "#hamburger-menu"
 });
-button = 1;
-console.log(button);
-console.log(menu);
+
+
+menu.open();
