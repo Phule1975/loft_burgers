@@ -59,9 +59,9 @@
             }
         }
 
-        .team-accordion__details {
+        /*.team-accordion__details {
             display: block;
-        }
+        }*/
     }
 }
 
@@ -111,9 +111,15 @@
 }
 
 .team-accordion__details {
+    /*@extend %clearfix;
+    padding-top: rem(20px);
+    display: none;*/
     @extend %clearfix;
     padding-top: rem(20px);
-    display: none;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
     @include tablets {
         padding: 0 25%;
     }
