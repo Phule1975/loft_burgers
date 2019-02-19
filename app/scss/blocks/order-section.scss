@@ -162,7 +162,7 @@
 .form__checkbox-elem:checked + .form__checkbox-fake {
     &:after {
       content: "";
-      background: url("../img/icon/check.svg") 50% no-repeat transparent;
+      background: url("../img/icons/check.svg") 50% no-repeat transparent;
       background-size: contain;
       width: 11px;
       height: 9px;
