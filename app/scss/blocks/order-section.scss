@@ -125,25 +125,25 @@
     position: relative;
   
     &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      background: $tomato;
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      border-radius: 50%;
-      transition: width .3s, height .3s;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background: $tomato;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width .3s, height .3s;
     }
 }
 
 
 .form__radio-elem:checked + .form__radio-fake {
     &:after {
-      width:rem(8px);
-      height:rem(8px);
+        width:rem(8px);
+        height:rem(8px);
     }
 }
 
@@ -161,15 +161,15 @@
 
 .form__checkbox-elem:checked + .form__checkbox-fake {
     &:after {
-      content: "";
-      background: url("../img/icons/check.svg") 50% no-repeat transparent;
-      background-size: contain;
-      width: 11px;
-      height: 9px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+    content: "";
+    background: url("../img/icons/check.svg") 50% no-repeat transparent;
+    background-size: contain;
+    width: 11px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     }
 }
 
@@ -188,7 +188,6 @@
         margin-right: 0;
     }
 }
-     
     
 /*
 
@@ -209,7 +208,7 @@
 
 
 
-  
+
 .form__button_reset {
     padding-left: 0;
     padding-right: 0;

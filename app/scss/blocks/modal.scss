@@ -6,6 +6,18 @@
         max-width: rem(450px);
     }
 
+    &__title {
+        @include gagalin;
+        font-size: rem(14px);
+        text-transform: uppercase;
+        margin-bottom: rem(25px);
+    }
+
+    &__content {
+        font-size: rem(14px);
+        @include ubuntu(medium);
+    }
+
     &__close {
         width: rem(20px);
         height: rem(20px);

@@ -7,11 +7,11 @@ let menu = (function(options) {
         buttonClick.classList.toggle("is-active");
         menu.classList.toggle("is-active");
         body.classList.toggle('is-locked');
-        console.log(buttonClick);
-        console.log(menu);
+        
     }
     let addListeners= function () {
         buttonClick.addEventListener("click", _toggleMenu); 
+
     }
 
     return {
@@ -24,22 +24,6 @@ let menu = (function(options) {
 
 menu.open();
 
-/*slider = (function(){   
-
-    let moveslider = function(){
-
-    }
-
-    let addListeners= function () {
-        moveslider();
-    }
-
-    return {
-        init:addListeners
-    }
-})();
-
-slider.init();*/
 
 let teamAccoJS = () => {
     let oTeamLink = document.querySelectorAll(".team-accordion__link");
@@ -147,21 +131,46 @@ slide.init();
 
 /*let sendForm = () => {
     let myForm = document.querySelector("#main-form");
-    let sendButton = document.querySelector("#sendButton");
+    let button1= document.querySelector("#sendButton");
+    button1.addEventListener("click", function(e) {
+        e.preventDefault();
+        let name1 = myForm.elements.name.value;
+        let phone1 = myForm.elements.phone.value;
+        let comment1 = myForm.elements.comment.value;
+        console.log(name1);
+        console.log(phone1);
+        console.log(comment1);
+        let formData = new FormData();
+        formData.append("name", myForm.elements.name.value);
+        formData.append("phone", myForm.elements.phone.value);
+        formData.append("comment", myForm.elements.comment.value);
+        formData.append("to", "e.sheleshkov@gmail.com");
+        console.dir(formData);
+    })
     
+    
+}
+sendForm();*/
+
+
+/*let sendForm = () => {
+    let myForm = document.querySelector("main-form");
+    let sendButton = document.querySelector("#sendButton");
+    console.log(myForm);
+
     sendButton.addEventListener("click", function (e) {
         e.preventDefault();
-    })
-}*/
-
+          })
+};
+*/
 
 
 var ajaxForm = function (form) {
 
-    let formData = new formData();
-    formData.append("name", form.elemets.name.value);
-    formData.append("phone", form.elemets.phone.value);
-    formData.append("comment", form.elemets.comment.value);
+    let formData = new FormData();
+    formData.append("name", form.elements.name.value);
+    formData.append("phone", form.elements.phone.value);
+    formData.append("comment", form.elements.comment.value);
     formData.append("to", "e.sheleshkov@gmail.com");
 
     let url = "https://webdev-api.loftschool.com/sendmail/";
@@ -173,6 +182,8 @@ var ajaxForm = function (form) {
 
     return xhr;    
 }
+
+
 
 const overlay = (function () {
     let body = document.querySelector("body");
@@ -213,8 +224,8 @@ const overlay = (function () {
     closeOverlay = function (modalID) {
         let overlay = document.querySelector(modalID);
 
-         overlay.classList.remove("is-active");
-         body.classList.remove(locked);
+        overlay.classList.remove("is-active");
+        body.classList.remove("locked");
     }
 
     let setContent = function (modalId, content) {
@@ -234,3 +245,24 @@ const overlay = (function () {
         setContent: setContent
     }
 })();
+
+var submitForm = function (e) {
+    e.preventDefault();
+    var form = e.target;
+    let = request = ajaxForm(form);
+
+    request.addEventListener("load", () => {
+        if (request.status >= 400){
+            let content = "Ошибка соединения";
+            
+            overlay.open("#modal-review", content)
+            console.log(content);
+        } else if (request.response.status){
+            let content = request.response.message;
+            overlay.open("modal-review", content)
+        }
+    });
+    
+};
+
+overlay.open("#modal-review", "khjhjhjjh");
