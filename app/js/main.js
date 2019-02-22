@@ -129,41 +129,50 @@ const slide = (function () {
 slide.init();
 
 
-/*let sendForm = () => {
-    let myForm = document.querySelector("#main-form");
-    let button1= document.querySelector("#sendButton");
-    button1.addEventListener("click", function(e) {
+/*-------------------------------------------------------------------------*/
+var overlay = (function(){
+
+    /* Закрыть модальное окно */
+
+    let closeOverlay = function(modalId, content){
+        let overlay = document.querySelector(modalId);
+        let innerOverlay = document.querySelector(`.${modalId.substr(1)}__inner`);
+        let link = document.querySelector(`.${modalId.substr(1)}__close`);
+        overlay.classList.remove('modal_active');
+        document.body.classList.remove('is-locked');
+        content.remove();
+        link.remove();
+        innerOverlay.remove();
+    };
+
+
+    let openOverlay = function(modalId, content){
+        let overlay = document.querySelector(modalId);
+        let innerOverlay = document.createElement('div');
+        innerOverlay.classList.add(`${modalId.substr(1)}__inner`)
+        overlay.appendChild(innerOverlay);
+        innerOverlay.appendChild(content);
+        let link = document.createElement('a');
+        link.setAttribute('href', '#');
+        link.classList.add(`${modalId.substr(1)}__close`);
+        innerOverlay.appendChild(link);
+
+        overlay.addEventListener('click', function(e){
         e.preventDefault();
-        let name1 = myForm.elements.name.value;
-        let phone1 = myForm.elements.phone.value;
-        let comment1 = myForm.elements.comment.value;
-        console.log(name1);
-        console.log(phone1);
-        console.log(comment1);
-        let formData = new FormData();
-        formData.append("name", myForm.elements.name.value);
-        formData.append("phone", myForm.elements.phone.value);
-        formData.append("comment", myForm.elements.comment.value);
-        formData.append("to", "e.sheleshkov@gmail.com");
-        console.dir(formData);
-    })
-    
-    
-}
-sendForm();*/
+        if ((e.target === e.currentTarget)||(e.target.className === link.className)){
+            closeOverlay(modalId, content);
+        }
+        })
 
+        overlay.classList.add('modal_active');
+        document.body.classList.add('is-locked');
+        };
 
-/*let sendForm = () => {
-    let myForm = document.querySelector("main-form");
-    let sendButton = document.querySelector("#sendButton");
-    console.log(myForm);
-
-    sendButton.addEventListener("click", function (e) {
-        e.preventDefault();
-          })
-};
-*/
-
+    return {
+        open: openOverlay,
+        close: closeOverlay
+    };
+})();
 
 var ajaxForm = function (form) {
 
@@ -172,97 +181,32 @@ var ajaxForm = function (form) {
     formData.append("phone", form.elements.phone.value);
     formData.append("comment", form.elements.comment.value);
     formData.append("to", "e.sheleshkov@gmail.com");
-
+    
     let url = "https://webdev-api.loftschool.com/sendmail/";
-
     const xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
     xhr.responseType = "json";
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.send(formData);
-
     return xhr;    
 }
 
 
 
-const overlay = (function () {
-    let body = document.querySelector("body");
-    let link = document.querySelector("a");
-
-    link.classList.add("modal-review__close");
-    link.setAttribute("href", "#");
-
-    let openOverlay = function (modalId, content) {
-        let overlay = document.querySelector(modalId);
-        let innerOverlay = overlay.querySelector(".modal-review__inner");
-
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            closeOverlay(modalId);
-        })
-
-        overlay.addEventListener("click", (e) => {
-            e.preventDefault();
-            if(e.target === overlay){
-                closeOverlay(modalId);
-            }
-        })
-
-        document.addEventListener("keydown", function (e) {
-            if(e.keyCode == 27) closeOverlay(modalId);
-        });
-
-        if(content){
-            innerOverlay.innerHTML = content;
-            innerOverlay.appendChild(link);
-        }
-
-        overlay.classList.add("is-active");
-        body.classList.add("locked");
-    }
-
-    closeOverlay = function (modalID) {
-        let overlay = document.querySelector(modalID);
-
-        overlay.classList.remove("is-active");
-        body.classList.remove("locked");
-    }
-
-    let setContent = function (modalId, content) {
-        let overlay =document.querySelector(modalId);
-        let innerOverlay = overlay.querySelector(".modal-review__inner");
-
-        if(content){
-            innerOverlay.innerHTML = content;
-            innerOverlay.appendChild(link);
-        } 
-        
-    }
-
-    return {
-        open: openOverlay,
-        close: closeOverlay,
-        setContent: setContent
-    }
-})();
-
-var submitForm = function (e) {
+var submitForm = function(e){
     e.preventDefault();
     var form = e.target;
-    let = request = ajaxForm(form);
-
-    request.addEventListener("load", () => {
-        if (request.status >= 400){
-            let content = "Ошибка соединения";
-            
-            overlay.open("#modal-review", content)
-            console.log(content);
-        } else if (request.response.status){
-            let content = request.response.message;
-            overlay.open("modal-review", content)
-        }
-    });
-    
+    let request = ajaxForm(form);
+    request.addEventListener('load', function(){
+        let content = document.createElement('div');
+        content.classList.add('modal-black');
+        content.innerHTML = request.response.message;
+        overlay.open('#modalForm', content);
+        })
 };
 
-overlay.open("#modal-review", "khjhjhjjh");
+
+const form = document.querySelector('#main-form');
+form.addEventListener('submit', submitForm);
+
+
