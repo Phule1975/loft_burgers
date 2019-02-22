@@ -59,7 +59,7 @@ let verticalAcco = () => {
         
         let links = document.querySelectorAll(".menu-acco__trigger");
         let linksWidht = parseFloat(getComputedStyle(links[0]).width);
-        let reqWidth = windowWidth - linksWidht * links.clientHeight;
+        let reqWidth = windowWidth - linksWidht * links.length;
         return reqWidth > 550 ? 550 :reqWidth;
     };
 
@@ -68,7 +68,7 @@ let verticalAcco = () => {
         personName.addEventListener("click", function(e) {
             e.preventDefault();
             let activePerson = document.querySelector(".menu-acco__item.active");
-
+            let linkActive = e.target.closest('.menu-acco__trigger');
             if (activePerson) {
                 let teamAccordionDetails = activePerson.querySelector(".menu-acco__content")
 
@@ -76,10 +76,10 @@ let verticalAcco = () => {
                 activePerson.classList.remove("active");
             }
             
-            if(!activePerson || activePerson.querySelector(".menu-acco__trigger") !== e.target){
+            if(!activePerson || activePerson.querySelector(".menu-acco__trigger") !== linkActive){
                 let currentPerson = e.target.closest(".menu-acco__item");
                 currentPerson.classList.add("active");
-
+               
                 let currentPersonInfo = currentPerson.querySelector(".menu-acco__content");
                 currentPersonInfo.style.width = calculateWidth() + "px";
             }
@@ -209,4 +209,26 @@ var submitForm = function(e){
 const form = document.querySelector('#main-form');
 form.addEventListener('submit', submitForm);
 
+let reviewOpen = function(){
+    let button = document.querySelector('.review__btn');
+    let container = document.querySelector('.reviews__list');
+   
+    container.addEventListener('click', function(e){
+        e.preventDefault();
+        let target = e.target;
+        let btnWrap = target.closest('.review__btn')
+        if(btnWrap.className === button.className){
+            let desc = btnWrap.previousElementSibling;
+            let titleHTML = desc.previousElementSibling.outerHTML;
+            let descHTML = desc.outerHTML;
+            let content = document.createElement('div');
+            content.classList.add('modal-black');
+            content.innerHTML = titleHTML + descHTML;
+            let descIsActive = content.querySelector('.review__text');
+            descIsActive.style.display = 'block';
+            overlay.open('#modal', content);
+        }
+    })
+};
 
+reviewOpen();
