@@ -1,0 +1,197 @@
+.burgers {
+    background: linear-gradient(to bottom,  #f9b43b 0%,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%);
+    align-items: center;
+    justify-content: center;
+
+    .section__title {
+        margin: rem(10px) 0 rem(30px) rem(10px);
+    }
+}
+
+.slider-warp {
+    position: relative;
+}
+
+.slider {
+    &__item {
+        position: relative;
+        padding-bottom: rem(85px);
+        display: flex;
+
+        @include tablets {
+            padding: 0;
+            padding-top: rem(75px);
+            flex-direction: column;
+        }
+
+        @include phones {
+            position: relative;
+        }
+    }
+
+    &__left,
+    &__right {
+        flex: 1;
+
+        @include tablets {
+            width: 100%;
+            text-align: center;
+        }
+        
+        @include tablets {
+            .section__title {
+                font-size: rem(50px);
+            }
+        }
+    }
+
+    &__left {
+        text-align: center;
+        align-items: flex-end;
+        display: flex;
+        justify-content: center;
+
+        @include tablets {
+            padding-top: 0;
+        }
+    }
+
+    &__pic {
+        max-width: 98%;
+        @include tablets {
+            max-width: 65%;
+        }
+    }
+
+    &__right {
+        .section__title {
+            line-height: 1em;
+        }
+        @include tablets {
+            padding: 0 13%;
+        }
+
+        @include phones {
+            padding: 0 5%
+        }
+    }
+
+    &__text {
+        color: $white;
+        margin-bottom: rem(30px);
+    }
+
+    &__options {
+        display: flex;
+        align-items: flex-end;
+    
+        @include tablets() {
+          justify-content: center;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        color: $tomato;
+        @include gagalin;
+    }
+
+    &__price-amount,
+    &__price-measure {
+        line-height: 1;
+    }
+
+    &__price-amount {
+        font-size: rem(72px);
+        @include tablets {
+          font-size: rem(50px);
+        }
+    }
+
+    &__price-measure {
+        font-size: rem(30px);
+    }
+    
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: rem(40px);
+        z-index: 20;
+    }
+
+    &__arrow {
+        width: 100%;
+        height: 100%;
+        fill: $white;
+    }
+
+    &__btn_next {
+        right: rem(-40px);
+        svg {
+          transform: rotate(-90deg);
+        }
+        @include tablets {
+          right: rem(-10px);
+        }
+        @include phones {
+          right: rem(-10px);
+        }
+    }
+
+    &__btn_prev {
+        left: rem(-40px);
+        @include tablets {
+          left: rem(-10px);
+        }
+        @include phones {
+          left: rem(-10px);
+        }
+        svg {
+          transform: rotate(90deg);
+        }
+    }   
+}
+
+
+
+.burger-weight {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: .5;
+  
+    @include tablets {
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+  
+    &__measure {
+      background: url('../img/icons/kkal.svg') 50% no-repeat;
+      width: rem(65px);
+      height: rem(60px);
+      position: relative;
+      background-size: contain;
+    }
+  
+    &__amount {
+      position: absolute;
+      bottom: rem(8px);
+      left: 52%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      font-size: rem(20px);
+      @include gagalin;
+    }
+  
+    &__title {
+      text-align: center;
+      font-size: rem(14px);
+      color: #fff;
+      @include gagalin;
+    }
+}

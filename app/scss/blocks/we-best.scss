@@ -1,0 +1,76 @@
+.we-best {
+    background: url("../img/background/best.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    @include phones {
+        align-items: flex-start; 
+        padding-top: rem(50px);
+    }
+}
+
+.we-best__title{
+    @include phones {
+        text-align: left;
+    }
+}
+
+.we-best__list {
+    display: flex;
+    @include phones {
+        flex-direction: column;
+    }
+}
+  
+  .we-best__item {
+    margin-right: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phones {
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        &:last-child {
+        margin-bottom: 0;
+        }
+    }
+
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .we-best__icon {
+    margin-bottom: rem(15px);
+    min-width: 100px;;
+    @include phones {
+        margin-bottom: 0;
+        margin-right: rem(20px);
+        width: 30%;
+    }
+  }
+
+  .we-best__icon-pic {
+      display: inline-block;
+      height: 5rem;      
+  }
+
+  .we-best__title {
+      @include lifehack;
+      font-size: rem(24px);
+      color: $dark-grey;
+      margin-bottom: 10px;
+  }
+
+  .we-best__text {
+      @include ubuntu (light);
+      font-size: rem(14px);
+      @include phones {
+          text-align: left
+      }
+  }

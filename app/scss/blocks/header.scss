@@ -1,6 +1,45 @@
 .header{
-    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-body{
-    background: #ccc;
+
+.header__menu {
+    flex: 1;
+    text-align: right;
+    margin-right: (6px);
+    
 }
+
+.header__link {
+    display: flex;
+    align-items: center;
+    margin-left: rem(9px);
+    @include tablets {
+        margin-left: auto;
+        margin-right: rem(25px);
+    }
+    @include phones {
+        margin-top: 10px;
+        margin-right: rem(45px);
+    }
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    padding-top: rem(12px);
+    &--hamburger {
+        position: fixed;
+        top: rem(12px);
+        left: rem(24px);
+    }
+}
+
+.logo__image {
+    max-width: rem(94px);
+}
+
+
+

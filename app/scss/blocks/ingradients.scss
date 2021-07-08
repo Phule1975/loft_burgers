@@ -1,0 +1,108 @@
+.ingredients {
+    position: absolute;
+    top: rem(20px);
+    background: rgba($tomato, .4);
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(5px);
+    transition: .3s;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include phones {
+      position: static;
+      margin-top: rem(-74px);
+    }
+
+    &:hover {
+        background: $tomato;
+        .ingredients__dropdown {
+            left: 100%;
+            opacity: 1;
+            @include phones {
+                left: rem(93px);
+                right: 0;
+            }
+        }
+    }
+
+    /*
+    &.ingredients_active {
+
+        background: $tomato;
+        .ingredients__dropdown {
+            left: 100%;
+            opacity: 1;
+            @include phones {
+                left: rem(93px);
+                right: 0;
+            }
+        }
+    }*/
+
+    @include tablets() {
+      top: 0;
+    }
+}
+  
+.ingredients__icon {
+
+    height: 60%;
+    fill: #fff;
+}
+  
+.ingredients__icon-text {
+    color: white;
+    font-size: rem(14px);
+    @include gagalin;
+    text-align: center;
+}
+  
+.ingredients__dropdown {
+    padding: rem(20px);
+    background: rgba(#fff, .9);
+    position: absolute;
+    width: rem(372px);
+    border-radius: rem(7px);
+    left: -9999px;
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: 10;
+    top: 0;
+    @include phones {
+        width: auto;
+    }
+}
+  
+.ingredients__list {
+    width: 100%;
+    @include phones {
+      width: 80%;
+    }
+}
+
+
+
+.ingredients__item {
+    @include ubuntu(500);
+}
+  
+.ingredients__close {
+    display: none;
+    @include phones {
+        display: block;
+        position: absolute;
+        top: rem(20px);
+        right: rem(10px);
+        width: rem(25px);
+        height: rem(25px);
+    }
+}
+  
+.ingredients__close-btn {
+    width: 100%;
+    height: 100%;
+    fill: #eb8262;
+}

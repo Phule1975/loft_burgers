@@ -1,0 +1,36 @@
+.section {
+    min-height: rem(650px);
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    @include tablets {
+        min-height: initial;
+    }
+    &_centered {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.section__title {
+    font-size: rem(72px);
+    @include gagalin;
+    color: $butterscotch;
+    margin-bottom: rem(40px);
+
+    &_black {
+        color: $dark-grey;
+    }
+    
+    &_white {
+        color: $white;
+    }
+    
+    &_position {
+        &_center {
+            text-align: center;
+        }
+    }
+}

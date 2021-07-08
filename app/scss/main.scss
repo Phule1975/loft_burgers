@@ -1,3 +1,21 @@
+@import "variables";
+@import"mixin";
 @import "fonts";
+@import "layout";
 
+@import "blocks/hero";
 @import "blocks/header";
+@import "blocks/nav";
+@import "blocks/btn.scss";
+@import "blocks/section";
+@import "blocks/we-best";
+@import "blocks/slider";
+@import "blocks/ingradients";
+@import "blocks/team";
+@import "blocks/menu";
+@import "blocks/reviews";
+@import "blocks/order-section";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/fixed-menu";
+@import "blocks/hamburger-menu";
