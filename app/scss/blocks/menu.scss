@@ -1,0 +1,134 @@
+.menu {
+    background: url('../img/menu/menu.jpg') 50% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.menu__title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.menu-acco {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @extend %clearfix;
+}
+
+.menu-acco__item {
+  float: left;
+  height: 100%;
+
+  &.active {
+    .menu-acco__trigger-text {
+      color: $butterscotch;
+    }
+    .menu-acco__content{
+      width:rem(550px);
+    }
+  }
+}
+
+.menu-acco__trigger {
+  width: rem(80px);
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+  float: left;
+  @include cover;
+  text-decoration: none;
+  position: relative;
+  @include phones {
+    width: rem(50px);
+  }
+}
+
+.menu-acco__trigger-text {
+  font-size: rem(40px);
+  color: #fff;
+  font-family: gagalin, cursive;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+}
+
+.menu-acco__content {
+  height: 100%;
+  float: left;
+  background: rgba(#2f3234, .93);
+  width: 0;
+  overflow: hidden;
+}
+
+.menu-acco__text {
+  @include ubuntu(300);
+  font-size: rem(14px);
+  color: #fff;
+  padding: rem(60px) rem(30px);
+  width: 100%;
+  line-height: 1.8;
+}
+
+.menu-acco__item {
+    float: left;
+    height: 100%;
+    
+    &.active {
+        .menu-acco__trigger-text {
+            color: $butterscotch;
+        }
+        /*.menu-acco__content {
+            width: rem(550px);
+        }*/
+    }
+}
+
+.menu-acco__trigger {
+    width: rem(80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    float: left;
+    @include cover;
+    text-decoration: none;
+    position: relative;
+    @include phones {
+        width: rem(50px);
+    }
+}
+
+.menu-acco__trigger-text {
+    font-size: rem(40px);
+    color: $white;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
+
+.menu-acco__content {
+    height: 100%;
+    float: left;
+    background: rgba($dark-grey, .93);
+    width: 0;
+    overflow: hidden;
+}
+
+.menu-acco__text {
+    @include ubuntu();
+    font-size: rem(14px);
+    color: $white;
+    padding: rem(60px) rem(30px);
+    width: 100%;
+    line-height: 1.8;
+}

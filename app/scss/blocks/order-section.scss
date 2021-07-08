@@ -1,0 +1,220 @@
+.order-section {
+    background: url("../img/background/delivery.jpg") center center no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.main-form {
+    @extend %clearfix;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 15%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col {
+    width: 50%;
+    float: left;
+    margin-right: rem(20px);
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    @include phones {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(20px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__buttons {
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: rem(20px);
+    }
+}
+    
+
+
+.form__block {
+    margin-right: rem(20px);
+    flex: 1;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__label{
+    color: $white;
+    margin-bottom: 10px;
+    font-size: rem(14px);
+    
+
+}
+
+.form__input {
+    border: 2px solid transparent;
+    border-radius: rem(5px);
+    width: 100%;
+    padding: rem(5px) rem(10px);
+    outline: none;
+    &:focus {
+        border: 2px solid $butterscotch;
+    }
+}
+
+.form__input_textarea{
+    height:110px;
+    resize: none;
+}
+
+.form__radio{
+    display: flex;
+    margin-right:rem(20px);
+    align-items:center;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__radio-title{
+    color:#fff;
+    margin-bottom: 0;
+    margin-left:rem(10px);
+}
+
+.form__radio-elem, .form__checkbox-elem{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form__radio-fake{
+    width:rem(16px);
+    height:rem(16px);
+    border-radius:50%;
+    background: $white;
+    position: relative;
+  
+    &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background: $tomato;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width .3s, height .3s;
+    }
+}
+
+
+.form__radio-elem:checked + .form__radio-fake {
+    &:after {
+        width:rem(8px);
+        height:rem(8px);
+    }
+}
+
+.form__checkbox{
+    display: flex;
+    align-items:center;
+}
+
+.form__checkbox-fake{
+    width:rem(16px);
+    height:rem(16px);
+    background:$white;
+    position: relative;
+}
+
+.form__checkbox-elem:checked + .form__checkbox-fake {
+    &:after {
+    content: "";
+    background: url("../img/icons/check.svg") 50% no-repeat transparent;
+    background-size: contain;
+    width: 11px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+}
+
+.form__button {
+    margin-right: 20px;
+    border: 0;
+    background: $tomato;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #ffffff;
+    @include ubuntu(medium);
+    padding: 10px 15px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+    
+/*
+
+.btn {
+    @include ubuntu (medium);
+    font-size: rem(13px);
+    display: inline-block;
+    color: $white;
+    padding: rem(3px) rem(15px);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+*/
+
+
+
+
+.form__button_reset {
+    padding-left: 0;
+    padding-right: 0;
+    text-transform: none;
+    background: transparent;
+    outline: none;
+}
+
+

@@ -1,0 +1,35 @@
+.btn {
+    @include ubuntu (medium);
+    font-size: rem(13px);
+    display: inline-block;
+    color: $white;
+    padding: rem(10px) rem(15px);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn--order {
+    background: $tomato;
+    &:hover {
+        background: darker($tomato, 2);
+    }
+}
+
+.btn--black {
+    background: $dark-grey;
+    &:hover {
+        background: darker($dark-grey, 2);
+    }
+}
+
+.btn--buy {
+    margin-left: rem(32px);
+}
+
+.btn--close {
+    background-color: $tomato;
+}
